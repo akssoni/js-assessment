@@ -20,6 +20,9 @@ module.exports = function(grunt) {
           livereload: true
         }
       }
+    },
+    opts: {
+      stdio: 'inherit'
     }
   });
 
