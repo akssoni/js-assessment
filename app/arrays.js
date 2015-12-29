@@ -113,7 +113,28 @@ define(function() {
 
     duplicates : function(arr) {
 
+        var count= [];
 
+        var length = arr.length;
+
+        for(var i=0; i<length;i++){
+            
+                if(typeof count[arr[i]] === 'undefined')
+                    count[arr[i]]=1;
+                else
+                    count[arr[i]]++;
+        }
+
+        length = count.length;
+        var ret =[];
+        for(var j=0; j<length;j++){
+            
+                if(count[j] > 1)
+                    ret.push(j);
+              
+        }
+
+        return ret;
 
     },
 
